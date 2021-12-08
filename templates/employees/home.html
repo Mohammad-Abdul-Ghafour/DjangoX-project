@@ -1,0 +1,14 @@
+{% extends '_employee_base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<br>
+<button><a href="/create">Create</a></button>
+        {% for employee in object_list %}
+            <h2><a href ='{{employee.get_absolute_url}}'>{{employee.name}}</a></h2>
+            <li>Department : {{employee.position}}</li>
+            <li>Active : {{employee.is_active}}</li>
+            <hr>
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends '_employee_base.html' %}
+
+{% block title %}delete {{employees.name}}{% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ employees.name }}"?</p>
+        <input type="submit" value="Delete">
+    </form>
+{% endblock %}

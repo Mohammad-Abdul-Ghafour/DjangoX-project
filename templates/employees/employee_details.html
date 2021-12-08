@@ -1,0 +1,13 @@
+{% extends '_employee_base.html' %}
+
+{% block title %}{{employees.name}} details{% endblock %}
+
+{% block content %}
+    <h1>{{employees.name}}</h1>
+    <h2>{{employees.position}}</h2>
+    <h3>{{employees.start_date}}</h3>
+    <h3>{{employees.is_active}}</h3>
+    <h3>{{employees.register}}</h3>
+    <button><a href = "/delete{{employees.get_absolute_url}}">Delete</a></button>
+    <button><a href = "/update{{employees.get_absolute_url}}">Update</a></button>
+{% endblock %}
